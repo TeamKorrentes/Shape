@@ -1,37 +1,33 @@
 package ru.teamkorrentes.shape;
 
 /**
- * Дочерний класс, для определения площади круга.
+ * Р”РѕС‡РµСЂРЅРёР№ РєР»Р°СЃСЃ, РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё РєСЂСѓРіР°.
  *
- * @author Смелов М.А. 13ОИТ18К
+ * @author РЎРјРµР»РѕРІ Рњ.Рђ. 13РћРРў18Рљ
  */
-public class Circle implements Shape {
+public class Circle extends Shape {
 
-    public double radius;
+    private Point center;
+    private double radius;
 
     public Circle() {
+        this.center = new Point(0, 0);
         this.radius = 1;
     }
 
-    public Circle(double radius) {
+    public Circle(Point center, double radius, Color color) {
+        this.center = center;
         this.radius = radius;
+        this.color = color;
     }
 
-    @Override
-    public String getColor() {
-        return null;
-    }
-
-    @Override
-    public double getPoint() {
-        return 0;
+    public Point getPoint() {
+        return center;
     }
 
     /**
-     * Метод нахождения площади
-     * @param radius Радиус окружности
-     * @param PI Число ПИ
-     * @return Результат нахождения площади
+     * РњРµС‚РѕРґ РЅР°С…РѕР¶РґРµРЅРёСЏ РїР»РѕС‰Р°РґРё
+     * @return Р РµР·СѓР»СЊС‚Р°С‚ РЅР°С…РѕР¶РґРµРЅРёСЏ РїР»РѕС‰Р°РґРё
      */
     public  double area(){
         return Math.PI*radius*radius;
