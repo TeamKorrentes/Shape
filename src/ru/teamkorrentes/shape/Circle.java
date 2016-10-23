@@ -1,8 +1,13 @@
 package ru.teamkorrentes.shape;
 
+/**
+ * Дочерний класс, для определения площади круга.
+ *
+ * @author Смелов М.А. 13ОИТ18К
+ */
 public class Circle implements Shape {
 
-    public static double radius;
+    public double radius;
 
     public Circle() {
         this.radius = 1;
@@ -22,7 +27,13 @@ public class Circle implements Shape {
         return 0;
     }
 
-    public double area(){
+    /**
+     * Метод нахождения площади
+     * @param radius Радиус окружности
+     * @param PI Число ПИ
+     * @return Результат нахождения площади
+     */
+    public  double area(){
         return Math.PI*radius*radius;
     }
 }
