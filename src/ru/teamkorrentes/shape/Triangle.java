@@ -1,58 +1,35 @@
 package ru.teamkorrentes.shape;
 
 /**
- * Дочерний класс, для определения площади треугольника.
+ * Р”РѕС‡РµСЂРЅРёР№ РєР»Р°СЃСЃ, РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°.
  *
- * @author Манчин А. 13ОИТ18К
+ * @author РњР°РЅС‡РёРЅ Рђ. 13РћРРў18Рљ
  */
-public class Triangle implements Shape {
-    @Override
-    public String getColor() {
-        return null;
-    }
+public class Triangle extends Shape {
 
-    @Override
-    public double getPoint() {
-        return 0;
-    }
-
-
-    public double x1;
-    public double y1;
-
-    public double x2;
-    public double y2;
-
-    public double x3;
-    public double y3;
+    public Point firstPoint;
+    public Point secondPoint;
+    public Point thirdPoint;
 
     public Triangle() {
-        this.x1 = 1;
-        this.y1 = 1;
-        this.x2 = 1;
-        this.y2 = 1;
-        this.x3 = 1;
-        this.y3 = 1;
+        this.firstPoint = this.secondPoint = this.thirdPoint = new Point(1, 1);
     }
 
-    public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
-        this.x3 = x3;
-        this.y3 = y3;
+    public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint, Color color) {
+        this.firstPoint = firstPoint;
+        this.secondPoint = secondPoint;
+        this.thirdPoint = thirdPoint;
+        this.color = color;
     }
 
     /**
-     * Метод нахождения площади
-     * @param x1,y1 Первый угол
-     * @param x2,y2 Второй угол
-     * @param x3,y3 Третий угол
-     * @return Результат нахождения площади
+     * РњРµС‚РѕРґ РЅР°С…РѕР¶РґРµРЅРёСЏ РїР»РѕС‰Р°РґРё
+     * @return Р РµР·СѓР»СЊС‚Р°С‚ РЅР°С…РѕР¶РґРµРЅРёСЏ РїР»РѕС‰Р°РґРё
      */
     public double area(){
-        return 0.5*Math.abs((x1-x3)*(y2-y3) - (x2-x3)*(y1-y3));
-
+        return 0.5*Math.abs(
+                (firstPoint.getX()-thirdPoint.getX()) * (secondPoint.getY()-thirdPoint.getY()) -
+                (secondPoint.getX()-thirdPoint.getX()) * (firstPoint.getY()-thirdPoint.getY())
+        );
     }
 }

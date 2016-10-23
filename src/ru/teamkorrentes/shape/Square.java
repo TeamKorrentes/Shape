@@ -1,37 +1,35 @@
 package ru.teamkorrentes.shape;
 
 /**
- * Дочерний класс, для определения площади квадрата.
+ * Р”РѕС‡РµСЂРЅРёР№ РєР»Р°СЃСЃ, РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё РєРІР°РґСЂР°С‚Р°.
  *
- * @author Манчин А. 13ОИТ18К
+ * @author РњР°РЅС‡РёРЅ Рђ. 13РћРРў18Рљ
  */
-public class Square implements Shape {
-    @Override
-    public String getColor() {
-        return null;
-    }
+public class Square extends Shape {
 
-    @Override
-    public double getPoint() {
-        return 0;
-    }
-        
-    public double a;
+    public Point leftTop;
+    public double side;
 
     public Square() {
-        this.a = 1;
+        this.leftTop = new Point(0, 0);
+        this.side = 1;
     }
 
-    public Square(double a) {
-        this.a = a;
+    public Square(Point leftTop, double side, Color color) {
+        this.leftTop = leftTop;
+        this.side = side;
+        this.color = color;
     }
 
     /**
-     * Метод нахождения площади
-     * @param a Сторона квадрата
-     * @return Результат нахождения площади
+     * РњРµС‚РѕРґ РЅР°С…РѕР¶РґРµРЅРёСЏ РїР»РѕС‰Р°РґРё
+     * @return Р РµР·СѓР»СЊС‚Р°С‚ РЅР°С…РѕР¶РґРµРЅРёСЏ РїР»РѕС‰Р°РґРё
      */
     public double area(){
-        return a*a;
+        return side*side;
+    }
+
+    public Point getPoint() {
+        return leftTop;
     }
 }

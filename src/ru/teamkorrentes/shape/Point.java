@@ -1,14 +1,11 @@
 package ru.teamkorrentes.shape;
 
-import java.util.Scanner;
-
 /**
- * Вспомогательный класс для ввода координат.
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РІРІРѕРґР° РєРѕРѕСЂРґРёРЅР°С‚.
  *
- * @author Маклаков С. 13ИОТ18К
+ * @author РњР°РєР»Р°РєРѕРІ РЎ. 13РРћРў18Рљ
  */
 public class Point {
-    static Scanner reader = new Scanner(System.in);
     public int x;
     public int y;
 
