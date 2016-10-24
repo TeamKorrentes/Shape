@@ -3,7 +3,7 @@ package ru.teamkorrentes.shape;
 /**
  * Дочерний класс, для определения площади треугольника.
  *
- * @author Манчин А. 13ОИТ18К
+ * @author Манчин А.С. 13ОИТ18К
  */
 public class Triangle extends Shape {
 
@@ -11,10 +11,20 @@ public class Triangle extends Shape {
     public Point secondPoint;
     public Point thirdPoint;
 
+    /**
+     * Конструктор по умолчанию задает первую, второю и третью точку.
+     */
     public Triangle() {
         this.firstPoint = this.secondPoint = this.thirdPoint = new Point(1, 1);
     }
 
+    /**
+     * Конструктор с параматрами задает первую точку,вторую точку, третью точку и цвет
+     * @param firstPoint Первая точка
+     * @param secondPoint Вторая точка
+     * @param thirdPoint Третья точка
+     * @param color Цвет
+     */
     public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint, Color color) {
         this.firstPoint = firstPoint;
         this.secondPoint = secondPoint;

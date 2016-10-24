@@ -10,11 +10,20 @@ public class Circle extends Shape {
     private Point center;
     private double radius;
 
+    /**
+     * Конструктор по умолчанию задает центр и радиус
+     */
     public Circle() {
         this.center = new Point(0, 0);
         this.radius = 1;
     }
 
+    /**
+     * Конструктор с параметрами задает центр, радиус и цвет
+     * @param center Центр окружности
+     * @param radius Радиус
+     * @param color Цвет
+     */
     public Circle(Point center, double radius, Color color) {
         this.center = center;
         this.radius = radius;

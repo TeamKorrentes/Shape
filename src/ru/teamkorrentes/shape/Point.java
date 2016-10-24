@@ -3,17 +3,25 @@ package ru.teamkorrentes.shape;
 /**
  * Вспомогательный класс для ввода координат.
  *
- * @author Маклаков С. 13ИОТ18К
+ * @author Маклаков С.П. 13ИОТ18К
  */
 public class Point {
     public int x;
     public int y;
 
+    /**
+     * Конструктор по умолчанию задает две точки координат.
+     */
     public Point() {
         this.x = 0;
         this.y = 0;
     }
 
+    /**
+     * Конструктор с параметрами задает две точки координат.
+     * @param x Первая точка координат
+     * @param y Вторая точка координат
+     */
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
