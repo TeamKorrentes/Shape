@@ -1,2 +1,4 @@
 Shape.iml
 *.class
+*.name
+*.xml
