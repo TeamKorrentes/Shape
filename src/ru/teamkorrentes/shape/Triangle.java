@@ -1,40 +1,45 @@
 package ru.teamkorrentes.shape;
 
-public class Triangle implements Shape {
-    @Override
-    public String getColor() {
-        return null;
-    }
+/**
+ * Дочерний класс, для определения площади треугольника.
+ *
+ * @author Манчин А.С. 13ОИТ18К
+ */
+public class Triangle extends Shape {
 
+    public Point firstPoint;
+    public Point secondPoint;
+    public Point thirdPoint;
 
-    public static double x1;
-    public static double y1;
-
-    public static double x2;
-    public static double y2;
-
-    public static double x3;
-    public static double y3;
-
+    /**
+     * Конструктор по умолчанию задает первую, второю и третью точку.
+     */
     public Triangle() {
-        x1 = 1;
-        y1 = 1;
-        x2 = 1;
-        y2 = 1;
-        x3 = 1;
-        y3 = 1;
+        this.firstPoint = this.secondPoint = this.thirdPoint = new Point(1, 1);
     }
 
-    public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
-        Triangle.x1 = x1;
-        Triangle.y1 = y1;
-        Triangle.x2 = x2;
-        Triangle.y2 = y2;
-        Triangle.x3 = x3;
-        Triangle.y3 = y3;
+    /**
+     * Конструктор с параматрами задает первую точку,вторую точку, третью точку и цвет
+     * @param firstPoint Первая точка
+     * @param secondPoint Вторая точка
+     * @param thirdPoint Третья точка
+     * @param color Цвет
+     */
+    public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint, Color color) {
+        this.firstPoint = firstPoint;
+        this.secondPoint = secondPoint;
+        this.thirdPoint = thirdPoint;
+        this.color = color;
     }
 
+    /**
+     * Метод нахождения площади
+     * @return Результат нахождения площади
+     */
     public double area(){
-        return 0.5*Math.abs((x1-x3)*(y2-y3) - (x2-x3)*(y1-y3));
+        return 0.5*Math.abs(
+                (firstPoint.getX()-thirdPoint.getX()) * (secondPoint.getY()-thirdPoint.getY()) -
+                (secondPoint.getX()-thirdPoint.getX()) * (firstPoint.getY()-thirdPoint.getY())
+        );
     }
 }

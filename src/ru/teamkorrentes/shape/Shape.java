@@ -1,8 +1,17 @@
 package ru.teamkorrentes.shape;
 
-public interface Shape {
+/**
+ * Интерфейс Фигура, класс хронит в себе Цвет, Точка, Площадь.
+ *
+ * @author Смелов М.А. 13ОИТ18К
+ */
+public abstract class Shape {
 
-    String getColor();
-    double area();
+    Color color = Color.RED;
 
+    Color getColor() {
+        return color;
+    }
+
+    abstract double area();
 }

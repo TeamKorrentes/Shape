@@ -1,20 +1,22 @@
 package ru.teamkorrentes.shape;
 
+/**
+ * Вспомогательный класс для ввода цвета.
+ *
+ * @author Глазунов А. С. 13ОИТ18К
+ */
 public enum Color {
     RED("Красный"),
-    GREEN("Зелёный"),
-    BLUE("Синий"),
-    YELLOW("Жёлтый"),
-    PURPLE("Фиолетовый"),
-    LIGHTBLUE("Голубой");
+    GREEN("Зеленый"),
+    BLUE("Синий");
 
     private final String str;
-		
+
     Color(String s){
         str = s;
     }
-		
-    public String toString() {
+
+    public String toString(){
         return str;
     }
 }
