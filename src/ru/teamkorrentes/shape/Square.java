@@ -15,6 +15,7 @@ public class Square extends Shape {
      *
      */
     public Square() {
+        super(color.RED);
         this.leftTop = new Point(0, 0);
         this.side = 1;
     }
@@ -25,10 +26,10 @@ public class Square extends Shape {
      * @param side Сторона
      * @param color Цвет
      */
-    public Square(Point leftTop, double side, Color color) {
+    public Square(Color color, Point leftTop, double side) {
+        super(color);
         this.leftTop = leftTop;
         this.side = side;
-        this.color = color;
     }
 
     /**
@@ -42,4 +43,13 @@ public class Square extends Shape {
     public Point getPoint() {
         return leftTop;
     }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "leftTop=" + leftTop +
+                ", side=" + side +
+                "} " + super.toString();
+    }
 }
+

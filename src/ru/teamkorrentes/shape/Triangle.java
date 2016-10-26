@@ -15,7 +15,10 @@ public class Triangle extends Shape {
      * Конструктор по умолчанию задает первую, второю и третью точку.
      */
     public Triangle() {
-        this.firstPoint = this.secondPoint = this.thirdPoint = new Point(1, 1);
+        super(color.RED);
+        this.firstPoint = new Point(0, 0);
+        this.secondPoint = new Point(0, 0);
+        this.thirdPoint = new Point(0, 0);
     }
 
     /**
@@ -25,11 +28,11 @@ public class Triangle extends Shape {
      * @param thirdPoint Третья точка
      * @param color Цвет
      */
-    public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint, Color color) {
+    public Triangle(Color color, Point firstPoint, Point secondPoint, Point thirdPoint) {
+        super(color);
         this.firstPoint = firstPoint;
         this.secondPoint = secondPoint;
         this.thirdPoint = thirdPoint;
-        this.color = color;
     }
 
     /**
@@ -41,5 +44,14 @@ public class Triangle extends Shape {
                 (firstPoint.getX()-thirdPoint.getX()) * (secondPoint.getY()-thirdPoint.getY()) -
                 (secondPoint.getX()-thirdPoint.getX()) * (firstPoint.getY()-thirdPoint.getY())
         );
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "firstPoint=" + firstPoint +
+                ", secondPoint=" + secondPoint +
+                ", thirdPoint=" + thirdPoint +
+                "} " + super.toString();
     }
 }
