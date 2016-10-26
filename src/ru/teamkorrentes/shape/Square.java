@@ -12,10 +12,9 @@ public class Square extends Shape {
 
     /**
      * Конструктор по умолчанию задает точку и сторону.
-     *
      */
     public Square() {
-        super(color.RED);
+        super(Color.RED);
         this.leftTop = new Point(0, 0);
         this.side = 1;
     }
@@ -26,7 +25,7 @@ public class Square extends Shape {
      * @param side Сторона
      * @param color Цвет
      */
-    public Square(Color color, Point leftTop, double side) {
+    public Square(Point leftTop, double side, Color color) {
         super(color);
         this.leftTop = leftTop;
         this.side = side;

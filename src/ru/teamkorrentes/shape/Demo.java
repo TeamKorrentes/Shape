@@ -43,9 +43,9 @@ public class Demo {
      * Метод для вывода информации о массиве фигур.
      */
     private static void getInfo(Shape[] shapes){
-        shapes[0].toString();
-        shapes[1].toString();
-        shapes[2].toString();
+        for (Shape shape : shapes) {
+            System.out.println(shape.toString());
+        }
     }
 
     private static void getBiggest(Shape[] shapes){

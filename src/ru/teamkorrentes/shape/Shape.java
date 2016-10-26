@@ -7,8 +7,7 @@ package ru.teamkorrentes.shape;
  */
 public abstract class Shape {
 
-    Color color = Color.RED;
-
+    Color color;
 
     Color getColor() {
         return color;
@@ -17,8 +16,8 @@ public abstract class Shape {
     public Shape(Color color) {
         this.color = color;
     }
-    /*
-    * Заголовок для метода получения площади.
+    /**
+     * Заголовок для метода получения площади.
      */
     abstract double area();
 }
