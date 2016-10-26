@@ -14,21 +14,22 @@ public class Circle extends Shape {
      * Конструктор по умолчанию задает центр и радиус
      */
     public Circle() {
+        super(color.RED);
         this.center = new Point(0, 0);
         this.radius = 1;
     }
-
     /**
      * Конструктор с параметрами задает центр, радиус и цвет
      * @param center Центр окружности
      * @param radius Радиус
      * @param color Цвет
      */
-    public Circle(Point center, double radius, Color color) {
+    public Circle(Color color, Point center, double radius) {
+        super(color);
         this.center = center;
         this.radius = radius;
-        this.color = color;
     }
+
 
     public Point getPoint() {
         return center;
@@ -41,4 +42,14 @@ public class Circle extends Shape {
     public  double area(){
         return Math.PI*radius*radius;
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "center=" + center +
+                ", radius=" + radius +
+                "} " + super.toString();
+    }
 }
+
+
