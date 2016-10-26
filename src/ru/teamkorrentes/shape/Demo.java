@@ -12,14 +12,19 @@ public class Demo {
         Triangle triangle = new Triangle();
         Square square = new Square();
 
-        System.out.println("Стандартные конструкторы");
-        System.out.println("Площадь круга:" + circle.area());
-        System.out.println("Площадь квадрата: "  + square.area());
-        System.out.println("Площадь треугольника: " + triangle.area());
+        Shape[] defaultShapes = {
+                new Circle(new Point(5, 5), 5, Color.RED),
+                new Square(new Point(5, 5), 9, Color.BLUE),
+                new Triangle(
+                        new Point(0, 0),
+                        new Point(5, 5),
+                        new Point(10, 0),
+                        Color.GREEN
+                )
+        };
 
-        /**
-         * Массив для определения наибольшей площади фигур.
-         */
+        getInfo(defaultShapes);
+
         Shape[] shapes = {
                 new Circle(new Point(5, 5), 5, Color.RED),
                 new Square(new Point(5, 5), 9, Color.BLUE),
@@ -31,11 +36,19 @@ public class Demo {
                 )
         };
 
-        System.out.println("\n\nСравниваемые данные");
-        System.out.println("Площадь круга:" + shapes[0].area());
-        System.out.println("Площадь квадрата: "  + shapes[1].area());
-        System.out.println("Площадь треугольника: " + shapes[2].area());
+        getBiggest(shapes);
+    }
 
+    /**
+     * Метод для вывода информации о массиве фигур.
+     */
+    private static void getInfo(Shape[] shapes){
+        shapes[0].toString();
+        shapes[1].toString();
+        shapes[2].toString();
+    }
+
+    private static void getBiggest(Shape[] shapes){
         if(shapes[0].area() > shapes[1].area() && shapes[0].area() > shapes[2].area()){
             System.out.println("Круг больше всех ");
         }else if (shapes[1].area() > shapes[2].area()) {
