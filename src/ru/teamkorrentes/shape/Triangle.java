@@ -12,7 +12,7 @@ public class Triangle extends Shape {
     public Point thirdPoint;
 
     /**
-     * Конструктор по умолчанию задает первую, второю и третью точку.
+     * Конструктор по умолчанию задает первую точку (0.0), второю точку (0.0) и третью точку (0.0).
      */
     public Triangle() {
         super(Color.RED);
@@ -48,10 +48,10 @@ public class Triangle extends Shape {
 
     @Override
     public String toString() {
-        return "Triangle{" +
-                "firstPoint=" + firstPoint +
-                ", secondPoint=" + secondPoint +
-                ", thirdPoint=" + thirdPoint +
-                "} " + super.toString();
+        return "Треугольник" +
+                " Первая точка(" + firstPoint.toString() +
+                "), Вторая точка(" + secondPoint.toString() +
+                "), Третья точка(" + thirdPoint.toString() + ")" +
+                " Цветом " + color.toString();
     }
 }

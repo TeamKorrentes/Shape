@@ -13,6 +13,17 @@ public abstract class Shape {
         return color;
     }
 
+    /**
+     * Конструктор по умолчанию ставит красный цвет
+      */
+    public Shape(){
+        color = Color.RED;
+    }
+
+    /**
+     * Конструктор с параметрами задает цвет
+     * @param color Цвет
+     */
     public Shape(Color color) {
         this.color = color;
     }

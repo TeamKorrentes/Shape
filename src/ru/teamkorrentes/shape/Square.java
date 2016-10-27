@@ -11,7 +11,7 @@ public class Square extends Shape {
     public double side;
 
     /**
-     * Конструктор по умолчанию задает точку и сторону.
+     * Конструктор по умолчанию задает точку(0.0) и сторону 1.
      */
     public Square() {
         super(Color.RED);
@@ -45,10 +45,10 @@ public class Square extends Shape {
 
     @Override
     public String toString() {
-        return "Square{" +
-                "leftTop=" + leftTop +
-                ", side=" + side +
-                "} " + super.toString();
+        return "Квадрат" +
+                " Левая точка(" + leftTop.toString() +
+        "), Сторона(" + side + ")" +
+                " Цветом " + color.toString();
     }
 }
 

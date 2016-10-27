@@ -8,10 +8,6 @@ package ru.teamkorrentes.shape;
 public class Demo {
     public static void main(String[] args) {
 
-        Circle circle = new Circle();
-        Triangle triangle = new Triangle();
-        Square square = new Square();
-
         Shape[] defaultShapes = {
                 new Circle(new Point(5, 5), 5, Color.RED),
                 new Square(new Point(5, 5), 9, Color.BLUE),
@@ -48,6 +44,10 @@ public class Demo {
         }
     }
 
+    /**
+     * Выводит площадь большой фигруы
+     * @param shapes
+     */
     private static void getBiggest(Shape[] shapes){
         if(shapes[0].area() > shapes[1].area() && shapes[0].area() > shapes[2].area()){
             System.out.println("Круг больше всех ");
